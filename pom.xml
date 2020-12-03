@@ -4,11 +4,15 @@
 
   <groupId>net.jmhertlein</groupId>
   <artifactId>EverCoreUtils</artifactId>
-  <version>4.0-SNAPSHOT</version>
+  <version>5.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+  <scm>
+    <url>https://github.com/dustygooden/EverCoreUtils.git</url>
+  </scm>
+
   <name>EverCoreUtils</name>
-  <url>https://github.com/jmhertlein/EverCoreUtils</url>
+  <url>https://github.com/dustygooden/EverCoreUtils</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,13 +22,13 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
-      <version>1.8-R0.1-SNAPSHOT</version>
+      <version>1.16.4</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -49,6 +53,10 @@
     <repository>
       <id>spigot-nexus-snaps</id>
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots</url>
+    </repository>
+    <repository>
+    	<id>maven-repo-apache-commons</id>
+    	<url>https://repo1.maven.org/maven2/commons-codec/commons-codec/1.8</url>
     </repository>
   </repositories>
   <build>
@@ -87,4 +95,13 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.yaml</groupId>
+  			<artifactId>snakeyaml</artifactId>
+  			<version>1.15</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
